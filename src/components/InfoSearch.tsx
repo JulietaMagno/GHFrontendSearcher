@@ -1,4 +1,4 @@
-import GitHubLogo from '@/components/icons/GitHubLogo'
+//import GitHubLogo from '@/components/icons/GitHubLogo'
 import LocationIcon from '@/components/icons/LocationIcon'
 import LinkIcon from '@/components/icons/LinkIcon'
 import PageIcon from '@/components/icons/PageIcon'
@@ -22,28 +22,29 @@ function valideURL(url: string) {
 
 const InfoSearch = ({ user } : Props) => {
   return (
-    <article className='grid-areas rounded-xl g-white p-6 shadow-md  bg-white bg-opacity-5 dark:text-white dark:shadow-none mt-4' >
-      <div className='overflow-hidden section-logo mr-3 grid h-26 w-26 place-content-center rounded-full bg-gray-200 lg:mx-auto'>
+    <article className="grid-areas rounded-xl bg-white p-8 shadow-md dark:bg-[#242D42] dark:text-white dark:shadow-none mt-4">
+      <div className="section-logo mr-2 grid h-24 w-24 place-content-center overflow-hidden rounded-full bg-gray-200 lg:mx-auto">
         <Image 
           src={user.avatar_url} 
-          width={98}
-          height={98}
+          width={96}
+          height={96}
           alt={ `profile img user ${user.name}`} 
           className='rounded-full'
         />
         {/* <GitHubLogo className='relative top-2 h-full w-full p-1'/> */}
       </div>
       <div className="section-title">
-        <h2 className='text-3xl font-bold'>{user.name}</h2>
-        <p>@{user.login}</p>
+        <h2 className='text-2xl font-bold'>{user.name}</h2>
+        <p className='text-sm text-blue-500'>@{user.login}</p>
       </div>
-      <p className="section-date lg:text-right">{
+        <p className="section-date lg:text-right text-sm">{
         new Date(user?.created_at || "").toLocaleDateString("en-US", {
           year: "numeric",
           month: "long",
           day: "numeric",
         })
       }</p>
+      
       <p  className="section-description mt-8 leading-loose">
         {user.bio || 'This user has no bio.'}
       </p>
@@ -61,7 +62,7 @@ const InfoSearch = ({ user } : Props) => {
           <p className='text-xl font-bold'>{user.following}</p>
         </article>
       </div>
-      <div className="section-social mt-4 space-y-3 md:grid md:grid-cols-2">
+      <div className="section-social mt-6 space-y-3 md:grid md:grid-cols-2">
       <article className="flex space-x-2">
           <i>
           <LocationIcon 

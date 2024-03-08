@@ -15,7 +15,7 @@ const GitSearchbar = ({getUser}: Props) => {
   return (
     <form 
         onSubmit={handleSubmit}
-        className='flex flex-wrap items-center space-x-2 rounded-xl bg-white bg-opacity-5 px-1 py-2'
+        className='flex flex-wrap items-center space-x-2 rounded-xl dark:bg-[#242D42] bg-white shadow-md  dark:shadow-none  pl-4 pr-2 py-2'
     > 
         <span className='min-w-[20px]'>
             <SearchIcon className='fill-blue-500'/>
@@ -24,7 +24,7 @@ const GitSearchbar = ({getUser}: Props) => {
             name= "username"
             type="text" 
             placeholder="Search GitHub username..." 
-            className='bg-transparent rounded-lg py-2 flex-1 h-14 text-white placeholder:text-white-500 font-light focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50'
+            className='bg-transparent rounded-lg py-2 flex-1 h-14 dark:text-white dark:placeholder:text-white-500 font-light focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50'
         />
         <button 
             type="submit" 

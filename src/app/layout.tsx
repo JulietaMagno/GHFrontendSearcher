@@ -23,8 +23,8 @@ export default function RootLayout({
       className=""
       >
       <body className={robotoMono.className}>
-        <div className=" grid min-h-screen max-w-500 place-content-center bg-blue-50 px-4 dark:bg-[#151E35] ">
-          <div className="grid sm:w-[500px] md:w-[600px] l:w-[700px]">
+        <div className="grid min-h-screen place-content-center bg-blue-50 px-4 dark:bg-[#151E35] ">
+          <div className="sm:w-[500px] md:w-[600px] lg:w-[700px]">
             <Navbar />
             {children}
           </div>
