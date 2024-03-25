@@ -27,7 +27,7 @@ const Home = () => {
       <GitSearchbar getUser={getUser} />
       {user && <InfoSearch user={user} />}
       {error && (
-        <div className="rounded-lg bg-red-500 mt-4 p-4 text-white">{error}</div>
+        <div className="rounded-lg bg-red-500 mt-10 p-4 text-white">{error}</div>
       )}
     </>
     

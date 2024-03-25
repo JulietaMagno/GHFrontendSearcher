@@ -22,7 +22,7 @@ function valideURL(url: string) {
 
 const InfoSearch = ({ user } : Props) => {
   return (
-    <article className="grid-areas rounded-xl bg-white p-8 shadow-md dark:bg-[#242D42] dark:text-white dark:shadow-none mt-4">
+    <article className="grid-areas rounded-xl bg-white p-6 shadow-md dark:bg-[#242D42] dark:text-white dark:shadow-none mt-4">
       <div className="section-logo mr-2 grid h-24 w-24 place-content-center overflow-hidden rounded-full bg-gray-200 lg:mx-auto">
         <Image 
           src={user.avatar_url} 
@@ -48,18 +48,18 @@ const InfoSearch = ({ user } : Props) => {
       <p  className="section-description mt-8 leading-loose">
         {user.bio || 'This user has no bio.'}
       </p>
-      <div className="section-number mt-4 flex justify-around rounded-xl  bg-blue-50 p-8 text-center text-blue-950 dark:bg-[#151E35] dark:text-white">
+      <div className="section-number mt-3 flex justify-around rounded-xl  bg-blue-50 p-5 text-center text-blue-950 dark:bg-[#151E35] dark:text-white">
         <article>
-          <p>Repos</p>
-          <p className='text-xl font-bold'>{user.public_repos}</p>
+          <p className='text-sm'>Repos</p>
+          <p className='text-lg font-bold'>{user.public_repos}</p>
         </article>
         <article>
-          <p>Followers</p>
-          <p className='text-xl font-bold'>{user.followers}</p>
+          <p className='text-sm'>Followers</p>
+          <p className='text-lg font-bold'>{user.followers}</p>
         </article>
         <article>
-          <p>Followings</p>
-          <p className='text-xl font-bold'>{user.following}</p>
+          <p className='text-sm'>Followings</p>
+          <p className='text-lg font-bold'>{user.following}</p>
         </article>
       </div>
       <div className="section-social mt-6 space-y-3 md:grid md:grid-cols-2">
